@@ -7,10 +7,12 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebService
 @SOAPBinding(style= SOAPBinding.Style.RPC)
-public class FindBook {
+public class BookStorage {
 
     @WebMethod(operationName = "find")
     public Book find(@WebParam(name = "title")
@@ -29,5 +31,13 @@ public class FindBook {
         book.setTitle(title);
         book.setType(type);
         bookDao.addBook(book);
+    }
+
+    @WebMethod(operationName = "list")
+    public ArrayList<Book> listBook(){
+        ArrayList books = new ArrayList();
+        BookDao dao = new BookDao();
+        books.addAll(dao.getBooks());
+        return books;
     }
 }

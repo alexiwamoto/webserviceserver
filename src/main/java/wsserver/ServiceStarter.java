@@ -6,9 +6,9 @@ public class ServiceStarter {
 
     public static void main(String[] args) {
 
-        String url = "http://localhost:1212/find";
+        String url = "http://localhost:1212/storage";
 
-        Endpoint.publish(url, new FindBook());
+        Endpoint.publish(url, new BookStorage());
 
         System.out.println("Service started @ " + url);
 
