@@ -2,13 +2,16 @@ package wsserver;
 
 import wsserver.dao.BookDao;
 import wsserver.model.Book;
+import wsserver.model.Books;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import java.util.ArrayList;
-import java.util.List;
+
 
 @WebService
 @SOAPBinding(style= SOAPBinding.Style.RPC)
@@ -33,11 +36,13 @@ public class BookStorage {
         bookDao.addBook(book);
     }
 
-    @WebMethod(operationName = "list")
-    public ArrayList<Book> listBook(){
-        ArrayList books = new ArrayList();
+    @WebMethod
+    @XmlElementWrapper(name="list")
+    @XmlElement(name="books")
+    public Books listBook(){
         BookDao dao = new BookDao();
-        books.addAll(dao.getBooks());
+        Books books = new Books();
+        books.setBookList(dao.getBooks());
         return books;
     }
 }

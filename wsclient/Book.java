@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java de book complex type.
+ * <p>Java class for book complex type.
  * 
- * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="book">
@@ -43,7 +43,7 @@ public class Book {
     protected String type;
 
     /**
-     * Obtém o valor da propriedade autor.
+     * Gets the value of the autor property.
      * 
      * @return
      *     possible object is
@@ -55,7 +55,7 @@ public class Book {
     }
 
     /**
-     * Define o valor da propriedade autor.
+     * Sets the value of the autor property.
      * 
      * @param value
      *     allowed object is
@@ -67,7 +67,7 @@ public class Book {
     }
 
     /**
-     * Obtém o valor da propriedade id.
+     * Gets the value of the id property.
      * 
      * @return
      *     possible object is
@@ -79,7 +79,7 @@ public class Book {
     }
 
     /**
-     * Define o valor da propriedade id.
+     * Sets the value of the id property.
      * 
      * @param value
      *     allowed object is
@@ -91,7 +91,7 @@ public class Book {
     }
 
     /**
-     * Obtém o valor da propriedade title.
+     * Gets the value of the title property.
      * 
      * @return
      *     possible object is
@@ -103,7 +103,7 @@ public class Book {
     }
 
     /**
-     * Define o valor da propriedade title.
+     * Sets the value of the title property.
      * 
      * @param value
      *     allowed object is
@@ -115,7 +115,7 @@ public class Book {
     }
 
     /**
-     * Obtém o valor da propriedade type.
+     * Gets the value of the type property.
      * 
      * @return
      *     possible object is
@@ -127,7 +127,7 @@ public class Book {
     }
 
     /**
-     * Define o valor da propriedade type.
+     * Sets the value of the type property.
      * 
      * @param value
      *     allowed object is

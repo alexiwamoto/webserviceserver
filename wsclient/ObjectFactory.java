@@ -30,19 +30,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Books }
+     * 
+     */
+    public Books createBooks() {
+        return new Books();
+    }
+
+    /**
      * Create an instance of {@link Book }
      * 
      */
     public Book createBook() {
         return new Book();
-    }
-
-    /**
-     * Create an instance of {@link ArrayList }
-     * 
-     */
-    public ArrayList createArrayList() {
-        return new ArrayList();
     }
 
 }
